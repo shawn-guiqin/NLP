@@ -1,5 +1,5 @@
 # NLP
-自然语言处理 
+Natural Language  Process
 
 #1 Tokenization/ Cut Words
 文本切词
