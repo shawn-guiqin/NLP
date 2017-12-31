@@ -49,7 +49,7 @@ def scoring_term_weight():
     total_file_num = len(file_dict)
     files_info = {}
     terms_info = {}
-    signle_file_terms = {}
+
     files_terms={}
 
     for file_name, file_terms in file_dict.items():
@@ -57,6 +57,7 @@ def scoring_term_weight():
         total_term_num += len(file_terms)
         total_term_type += len(counted_terms)
         files_info[file_name] = [len(file_terms), len(counted_terms)]  # 多少词  多少种词
+        signle_file_terms = {}
         for term_name, term_count in counted_terms.items():
             NTFtd = term_count / len(file_terms)
             WFtd = 0 if term_count <= 0 else (1 + np.log(term_count))
